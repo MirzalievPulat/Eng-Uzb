@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_eng"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_english"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_uzb"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_uzbek"
+            app:layout_constraintBottom_toTopOf="@+id/copy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_eng" />
+
+        <TextView
+            android:id="@+id/eng_word"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Abnormal"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_eng"
+            app:layout_constraintStart_toEndOf="@+id/imageView_eng"
+            app:layout_constraintTop_toTopOf="@+id/imageView_eng" />
+
+        <TextView
+            android:id="@+id/uzb_word"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="normal bo'lmagan"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_uzb"
+            app:layout_constraintStart_toEndOf="@+id/imageView_uzb"
+            app:layout_constraintTop_toTopOf="@+id/imageView_uzb" />
+
+        <TextView
+            android:id="@+id/eng_transcript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/ojie: eefk/"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/eng_word"
+            app:layout_constraintStart_toStartOf="@+id/eng_word"
+            app:layout_constraintTop_toBottomOf="@+id/eng_word" />
+
+        <TextView
+            android:id="@+id/eng_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="(adj)"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/eng_word" />
+
+        <TextView
+            android:id="@+id/eng_countable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="[U]"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/eng_type"
+            app:layout_constraintStart_toStartOf="@+id/eng_type"
+            app:layout_constraintTop_toBottomOf="@+id/eng_type" />
+
+
+
+        <ImageView
+            android:id="@+id/bookmark"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/bookmark_fill"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/volume"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/volume_up_24px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bookmark" />
+
+        <ImageView
+            android:id="@+id/copy"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/content_copy_24px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/volume"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <eightbitlab.com.blurview.BlurView-->
+<!--        android:id="@+id/blur"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:blurOverlayColor="#36FFFFFF"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+</FrameLayout>
