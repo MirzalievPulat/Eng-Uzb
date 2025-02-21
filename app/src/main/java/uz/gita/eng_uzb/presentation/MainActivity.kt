@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewOutlineProvider
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import eightbitlab.com.blurview.RenderScriptBlur
 import uz.gita.eng_uzb.R
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)

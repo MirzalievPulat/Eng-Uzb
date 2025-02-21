@@ -20,7 +20,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -57,11 +58,16 @@ dependencies {
     val roomVersion = "2.6.1"
     implementation ("androidx.room:room-runtime:$roomVersion")
     ksp ("androidx.room:room-compiler:$roomVersion")
+
+
     implementation ("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.9")
 
     //blur effect
-    implementation ("com.github.Dimezis:BlurView:version-2.0.5")
+    implementation ("com.github.Dimezis:BlurView:version-2.0.6")
 
     //alphabetical scroll bar
     implementation ("me.zhanghai.android.fastscroll:library:1.3.0")
+
+    //splash screen
+    implementation("androidx.core:core-splashscreen:1.0.1")
 }

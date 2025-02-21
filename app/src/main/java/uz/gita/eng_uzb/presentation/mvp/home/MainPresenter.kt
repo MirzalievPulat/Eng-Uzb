@@ -5,7 +5,7 @@ import uz.gita.eng_uzb.data.room.entity.DictionaryEntity
 
 class MainPresenter(private val view: MainContract.View) : MainContract.Presenter {
     private val model: MainContract.Model = MainModel()
-    private lateinit var lastQuery:String
+    private var lastQuery:String = ""
     var isEng = true
     init {
         view.updateList(getWordsByLang())
@@ -13,7 +13,8 @@ class MainPresenter(private val view: MainContract.View) : MainContract.Presente
 
     override fun clickFavourite(dictionaryEntity: DictionaryEntity) {
         model.updateWord(dictionaryEntity)
-        searchByQuery(lastQuery)
+//        if (::lastQuery.isInitialized)
+            searchByQuery(lastQuery)
     }
 
     override fun dialogOpened(dictionaryEntity: DictionaryEntity) {
