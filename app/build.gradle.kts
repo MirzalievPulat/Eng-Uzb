@@ -6,14 +6,14 @@ plugins {
 
 android {
     namespace = "uz.gita.eng_uzb"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "uz.gita.eng_uzb"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        targetSdk = 35
+        versionCode = 2
+        versionName = "1.02"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
